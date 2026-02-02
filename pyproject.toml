@@ -1,0 +1,32 @@
+[project]
+name = "corrective-rag"
+version = "0.1.0"
+description = "Corrective-RAG LangGraph microservice"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # core RAG
+    "faiss-cpu>=1.9.0",
+    "langchain>=1.3.2",
+    "langchain-community>=0.3.0",   # PyPDFLoader, FastEmbedEmbeddings
+    "langchain-deepseek>=1.0.1",    # ChatDeepSeek LLM
+    "langchain-tavily>=0.2.18",     # TavilySearch (replaces deprecated community tool)
+    "langchain-text-splitters>=0.3.0",
+    "langgraph>=1.2.2",
+    # embeddings (local, no API key required)
+    "fastembed>=0.3.0",
+    # PDF loading
+    "pypdf>=5.0.0",
+    # API server
+    "fastapi[all]>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    # env
+    "python-dotenv>=1.0.0",
+    "langchain-chroma>=1.1.0",
+    "pymupdf>=1.27.2.3",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.15",
+]
