@@ -11,3 +11,6 @@ wheels/
 
 # Chroma persistent vector store
 chroma_db/
+
+# Reference documents
+documents/
